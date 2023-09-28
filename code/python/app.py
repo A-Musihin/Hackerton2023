@@ -7,7 +7,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 class User(UserMixin):
-    def __init__(self, id, username, email)
+    def __init__(self, id, username, email):
         self.id = id
         self.username = username
         self.email = email
