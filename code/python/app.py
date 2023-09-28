@@ -9,6 +9,7 @@ app = Flask(__name__)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+DatabaseConnector.connect(app)
 class User(UserMixin):
     def __init__(self, id, username, email):
         self.id = id
@@ -61,7 +62,7 @@ def logout():
 def index():
     return render_template('index.html')
 
-
+DatabaseConnector.close()
 
 if __name__ == '__main__':
     app.run(debug=True)
