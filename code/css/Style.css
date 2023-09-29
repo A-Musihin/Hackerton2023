@@ -1,0 +1,29 @@
+body {
+    background-image: url('https://static.odernichtoderdoch.de/media/image/65/48/c3/ONOD_Wallpaper_Organisation_Desktop.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#timer {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+button {
+    font-size: 20px;
+    margin: 10px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
