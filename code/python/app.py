@@ -9,60 +9,47 @@ app = Flask(__name__)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-DatabaseConnector.connect(app)
-class User(UserMixin):
-    def __init__(self, id, username, email):
-        self.id = id
-        self.username = username
-        self.email = email
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        email = request.form['email']
-        password = request.form['password']
-
-        user = User(1, username, email)
-
-        user.password_hash = generate_password_hash(password)
-
-        db.session.add(user)
-        db.session.commit()
-
-        login_user(user)
-
+    if current_user.is_authenticated:
         return redirect(url_for('index'))
-
-    return render_template('register.html')
+    
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        db = DatabaseConnector('localhost', 'root', '', 'flask')
+        db.connect()
+        password_hash = generate_password_hash(form.password.data)
+        query = "INSERT INTO users (username, email, password) VALUES (%s, %s, %s)"
+        values = (form.username.data, form.email.data, password_hash)
+        db.execute_query(query, values)
+        db.close()
+        return redirect(url_for('login'))
+    return render_template('register.html', form=form)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
 
-        user = db.session.query(User).filter(User.username == username).first()
-
-        if user and check_password_hash(user.password_hash, password):
-            login_user(user)
-            return redirect(url_for('index'))
-        
-        return render_template('login.html')
-
-    return render_template('login.html')        
-
-@app.route('/logout')
-def logout():
-    logout_user()
-    return redirect(url_for('index'))
+    form = LoginForm()
+    if form.validate_on_submit():
+        db = DatabaseConnector('localhost', 'root', '', 'flask')
+        db.connect()
+        query = "SELECT * FROM users WHERE email = %s"
+        values = (form.email.data,)
+        result = db.execute_query(query, values)
+        db.close()
+        if result is not None:
+            if check_password_hash(result[3], form.password.data):
+                user = User(result[0], result[1], result[2])
+                login_user(user, remember=form.remember.data)
+                return redirect(url_for('index'))
+    return render_template('login.html', form=form)
 
 @app.route('/')
 @login_required
 def index():
     return render_template('index.html')
-
-DatabaseConnector.close()
 
 if __name__ == '__main__':
     app.run(debug=True)
