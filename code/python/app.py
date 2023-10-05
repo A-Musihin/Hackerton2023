@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'e899d4a5c8f35f32fe47edb9620d1b8b'
 
 
-# login and registration
+# Login und Registrierung
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
