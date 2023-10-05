@@ -1,61 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Countdown Timer</h1>
-    <div id="timer"></div>
-    <button id="startButton">Start</button>
-    <button id="resetButton">Reset</button>
+{% extends "layout.html" %}
 
-    <script>
-        let timerInterval;
-        let secondsLeft = 25 * 60; // 25 Minuten in Sekunden
-    
-        // Funktion, die den Timer aktualisiert und anzeigt
-        function updateTimer(seconds) {
-          const timerElement = document.getElementById('timer');
-          const minutes = Math.floor(seconds / 60);
-          const remainingSeconds = seconds % 60;
-    
-          timerElement.textContent = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-        }
-    
-        // Funktion, die den Countdown startet
-        function startCountdown() {
-          timerInterval = setInterval(function() {
-            updateTimer(secondsLeft);
-    
-            if (secondsLeft === 0) {
-              clearInterval(timerInterval); // Timer stoppen, wenn die Zeit abgelaufen ist
-              alert('Zeit ist abgelaufen!');
-            } else {
-              secondsLeft--;
-            }
-          }, 1000);
-        }
-    
-        // Event-Handler für den "Start"-Button
-        document.getElementById('startButton').addEventListener('click', function() {
-          startCountdown();
-          document.getElementById('startButton').disabled = true;
-          document.getElementById('resetButton').disabled = false;
-        });
-    
-        // Event-Handler für den "Reset"-Button
-        document.getElementById('resetButton').addEventListener('click', function() {
-          clearInterval(timerInterval); // Timer stoppen
-          secondsLeft = 25 * 60; // Timer auf 25 Minuten zurücksetzen
-          updateTimer(secondsLeft);
-          document.getElementById('startButton').disabled = false;
-          document.getElementById('resetButton').disabled = true;
-        });
-    
-        // Initialen Timer anzeigen
+{% block content %}
+  <h1>Countdown Timer</h1>
+  <div id="timer"></div>
+  <button id="startButton">Start</button>
+  <button id="resetButton" disabled>Reset</button>
+
+  <script>
+    let timerInterval;
+    let secondsLeft = 25 * 60; // 25 minutes in seconds
+
+    // Function that updates and displays the timer
+    function updateTimer(seconds) {
+      const timerElement = document.getElementById('timer');
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = seconds % 60;
+
+      timerElement.textContent = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+
+    // Function that starts the countdown
+    function startCountdown() {
+      timerInterval = setInterval(() => {
+        secondsLeft--;
         updateTimer(secondsLeft);
-      </script>
-</body>
-</html>
+
+        if (secondsLeft === 0) {
+          clearInterval(timerInterval);
+          alert('Time is up!');
+        }
+      }, 1000);
+    }
+
+    // Function that resets the countdown
+    function resetCountdown() {
+      clearInterval(timerInterval);
+      secondsLeft = 25 * 60;
+      updateTimer(secondsLeft);
+      document.getElementById('startButton').disabled = false;
+      document.getElementById('resetButton').disabled = true;
+    }
+
+    // Add event listeners to the buttons
+    document.getElementById('startButton').addEventListener('click', function() {
+      startCountdown();
+      document.getElementById('startButton').disabled = true;
+      document.getElementById('resetButton').disabled = false;
+    });
+
+    document.getElementById('resetButton').addEventListener('click', resetCountdown);
+
+    // Initialize the timer display
+    updateTimer(secondsLeft);
+  </script>
+{% endblock %}
