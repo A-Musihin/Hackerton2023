@@ -11,9 +11,9 @@ Link of our problem definition with miro (read-only):
 https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
 
 Contains:
-DIY problem defition 5WH.s
-Emphatize and define: problem tree and an empathy map
-Ideate: Brainwriting
+- DIY problem defition 5WH.s
+- Emphatize and define: problem tree and an empathy map
+- Ideate: Brainwriting
 
 
 Link zur Präsentation:
