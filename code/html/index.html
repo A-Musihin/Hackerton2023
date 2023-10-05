@@ -60,10 +60,10 @@ button:disabled {
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Countdown Timer</title>
+<title>TaskPlanner</title>
 </head>
 <body>
-<h1>Countdown Timer</h1>
+<h1>TaskPlanner</h1>
 <div id="timer">
     <span id="minutes">25</span>:<span id="seconds">00</span>
 </div>
@@ -72,14 +72,14 @@ button:disabled {
 <button id="resetButton">Reset</button>
 
 <form id="taskForm">
-    <label for="task">Aufgabe:</label>
-    <input type="text" id="task" name="task" placeholder="Geben Sie Ihre Aufgabe ein">
-    <button id="saveTaskButton">Speichern</button>
+    <label for="task">Tasks:</label>
+    <input type="text" id="task" name="task" placeholder="Enter your Task..">
+    <button id="saveTaskButton">Save</button>
 </form>
 
 
 <div id="taskList">
-    <h2>Aufgabenliste:</h2>
+    <h2>Task List:</h2>
     <ul id="tasks">
     </ul>
 </div>
@@ -107,7 +107,7 @@ function startCountdown() {
 
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            alert('Zeit ist abgelaufen!');
+            alert('Time is up!');
         } else {
             secondsLeft--;
         }
@@ -161,10 +161,10 @@ document.getElementById('saveTaskButton').addEventListener('click', function(eve
 
         // Creates delete button after created task
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Löschen';
+        deleteButton.textContent = 'Delete';
         deleteButton.className = 'deleteButton'; // delete button style assignment
 
-        // adds Event-hanlder for delete
+        // adds Event-handler for delete
         deleteButton.addEventListener('click', function() {
             taskList.removeChild(taskItem); // deletes task from list
         });
@@ -177,7 +177,7 @@ document.getElementById('saveTaskButton').addEventListener('click', function(eve
 
         taskInput.value = ''; // clear input field
     } else {
-        alert('Bitte geben Sie eine Aufgabe ein.');
+        alert('Please enter a task.');
     }
 });
 
