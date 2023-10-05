@@ -14,8 +14,12 @@ app.config['SECRET_KEY'] = 'e899d4a5c8f35f32fe47edb9620d1b8b'
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('index'))
+        db = DatabaseConnector('localhost', 'root', 'password', 'mydatabase')
+        db.connect()
+        db.insert_user(form.email.data, generate_password_hash(form.password.data))
+        db.close()
+        flash('Your account has been created! You are now able to log in', 'success')
+        return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
 
@@ -23,12 +27,16 @@ def register():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        if form.email.data == 'admin@blog.com' and form.password.data == '123':
-            flash('You have been logged in!', 'success')
-            return redirect(url_for('tables'))
-
+        db = DatabaseConnector('localhost', 'root', 'password', 'mydatabase')
+        db.connect()
+        user = db.get_user(form.email.data)
+        db.close()
+        if user is not None and check_password_hash(user['password'], form.password.data):
+            login_user(UserMixin(user['id']), remember=form.remember.data)
+            next_page = request.args.get('next')
+            return redirect(next_page) if next_page else redirect(url_for('index'))
         else:
-            flash('Login Unsuccessful. Please check username and password', 'danger')
+            flash('Login unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
 @app.route('/')
