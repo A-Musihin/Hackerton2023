@@ -1,5 +1,8 @@
 # Hackerton2023
 
+Taskplanner - Task planning solution
+
+
 Group members:
 - Julian (IT2o)
 - Alexander (IT2o)
