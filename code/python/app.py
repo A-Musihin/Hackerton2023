@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user 
+from flask import Flask, render_template, redirect, url_for, flash
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user 
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import LoginForm, RegistrationForm
 from dbconnector import DatabaseConnector
@@ -28,7 +28,7 @@ class User(UserMixin):
             return None
         return User(user['id'])
 
-# Login und Registrierung
+# Registrierung
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
@@ -41,7 +41,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
-
+# Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -58,13 +58,13 @@ def login():
             flash('Login unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
-
+# Index
 @app.route('/')
 @login_required
 def index():
     return render_template('index.html')
 
-
+# Logout
 @app.route('/logout')
 @login_required
 def logout():

@@ -7,6 +7,7 @@
       <fieldset class="form-group">
         <legend class="border-bottom mb-4">Join Today</legend>
         <div class="form-group">
+          <!-- E-Mail field -->
           {{ form.email.label(class="form-control-label") }}
           {{ form.email(class="form-control form-control-lg") }}
           {% for error in form.email.errors %}
@@ -14,6 +15,7 @@
           {% endfor %}
         </div>
         <div class="form-group">
+          <!-- Password field -->
           {{ form.password.label(class="form-control-label") }}
           {{ form.password(class="form-control form-control-lg") }}
           {% for error in form.password.errors %}
@@ -21,6 +23,7 @@
           {% endfor %}
         </div>
         <div class="form-group">
+          <!-- Confirm password field -->
           {{ form.confirm_password.label(class="form-control-label") }}
           {{ form.confirm_password(class="form-control form-control-lg") }}
           {% for error in form.confirm_password.errors %}
@@ -34,6 +37,7 @@
     </form>
     <div class="border-top pt-3">
       <small class="text-muted">
+        <!-- Link to login page -->
         Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
       </small>
     </div>
