@@ -97,7 +97,7 @@ function updateTimer(minutes, seconds) {
     secondsElement.textContent = seconds < 10 ? `0${seconds}` : seconds;
 }
 
-// Function starts the Countdown
+// Function starts timer
 function startCountdown() {
     timerInterval = setInterval(function() {
         const minutes = Math.floor(secondsLeft / 60);
@@ -147,24 +147,24 @@ document.getElementById('resetButton').addEventListener('click', function() {
     document.getElementById('resetButton').disabled = true;
 });
 
-// Event-Handler saving tasks
+// Event-Handler saveTaskButton
 document.getElementById('saveTaskButton').addEventListener('click', function(event) {
     event.preventDefault(); // preventing page refresh
     const taskInput = document.getElementById('task');
     const task = taskInput.value.trim(); // trimming text for spaces
 
     if (task !== '') {
-        // Creates task and adding to list
+        // Creates task and adding to tasks(List of Tasks)
         const taskList = document.getElementById('tasks');
         const taskItem = document.createElement('li');
         taskItem.textContent = task;
 
-        // Creates delete button after created task
+        // Delete button after created task in tasklist
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.className = 'deleteButton'; // delete button style assignment
 
-        // adds Event-handler for delete
+        // Event-handler for delete
         deleteButton.addEventListener('click', function() {
             taskList.removeChild(taskItem); // deletes task from list
         });
