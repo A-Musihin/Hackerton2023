@@ -1,61 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<style>
+body {
+    background-image: url('https://static.odernichtoderdoch.de/media/image/65/48/c3/ONOD_Wallpaper_Organisation_Desktop.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+#timer {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+button {
+    font-size: 20px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#taskForm {
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+#taskList {
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+.deleteButton {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskPlanner</title>
 </head>
 <body>
-    <h1>Countdown Timer</h1>
-    <div id="timer"></div>
-    <button id="startButton">Start</button>
-    <button id="resetButton">Reset</button>
+<h1>TaskPlanner</h1>
+<div id="timer">
+    <span id="minutes">25</span>:<span id="seconds">00</span>
+</div>
+<button id="startButton">Start</button>
+<button id="stopButton">Stop</button>
+<button id="resetButton">Reset</button>
 
-    <script>
-        let timerInterval;
-        let secondsLeft = 25 * 60; // 25 Minuten in Sekunden
-    
-        // Funktion, die den Timer aktualisiert und anzeigt
-        function updateTimer(seconds) {
-          const timerElement = document.getElementById('timer');
-          const minutes = Math.floor(seconds / 60);
-          const remainingSeconds = seconds % 60;
-    
-          timerElement.textContent = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+<form id="taskForm">
+    <label for="task">Tasks:</label>
+    <input type="text" id="task" name="task" placeholder="Enter your Task..">
+    <button id="saveTaskButton">Save</button>
+</form>
+
+
+<div id="taskList">
+    <h2>Task List:</h2>
+    <ul id="tasks">
+    </ul>
+</div>
+
+<script>
+let timerInterval;
+let secondsLeft = 25 * 60;
+
+// Function updates timer 
+function updateTimer(minutes, seconds) {
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+
+    minutesElement.textContent = minutes;
+    secondsElement.textContent = seconds < 10 ? `0${seconds}` : seconds;
+}
+
+// Function starts timer
+function startCountdown() {
+    timerInterval = setInterval(function() {
+        const minutes = Math.floor(secondsLeft / 60);
+        const remainingSeconds = secondsLeft % 60;
+
+        updateTimer(minutes, remainingSeconds);
+
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+            alert('Time is up!');
+        } else {
+            secondsLeft--;
         }
-    
-        // Funktion, die den Countdown startet
-        function startCountdown() {
-          timerInterval = setInterval(function() {
-            updateTimer(secondsLeft);
-    
-            if (secondsLeft === 0) {
-              clearInterval(timerInterval); // Timer stoppen, wenn die Zeit abgelaufen ist
-              alert('Zeit ist abgelaufen!');
-            } else {
-              secondsLeft--;
-            }
-          }, 1000);
-        }
-    
-        // Event-Handler für den "Start"-Button
-        document.getElementById('startButton').addEventListener('click', function() {
-          startCountdown();
-          document.getElementById('startButton').disabled = true;
-          document.getElementById('resetButton').disabled = false;
+    }, 1000);
+}
+
+// Function stop timer
+function stopCountdown() {
+    clearInterval(timerInterval);
+    document.getElementById('startButton').disabled = false;
+    document.getElementById('stopButton').disabled = true;
+}
+
+// Event-Handler "Start"-Button
+document.getElementById('startButton').addEventListener('click', function() {
+    startCountdown();
+    document.getElementById('startButton').disabled = true;
+    document.getElementById('stopButton').disabled = false;
+    document.getElementById('resetButton').disabled = false;
+});
+
+// Event-Handler "Stop"-Button
+document.getElementById('stopButton').addEventListener('click', function() {
+    stopCountdown();
+    document.getElementById('startButton').disabled = false;
+    document.getElementById('stopButton').disabled = true;
+    document.getElementById('resetButton').disabled = false;
+});
+
+// Event-Handler "Reset"-Button
+document.getElementById('resetButton').addEventListener('click', function() {
+    clearInterval(timerInterval);
+    secondsLeft = 25 * 60;
+    updateTimer(25, 0); 
+    document.getElementById('startButton').disabled = false;
+    document.getElementById('stopButton').disabled = false;
+    document.getElementById('resetButton').disabled = true;
+});
+
+// Event-Handler saveTaskButton
+document.getElementById('saveTaskButton').addEventListener('click', function(event) {
+    event.preventDefault(); // preventing page refresh
+    const taskInput = document.getElementById('task');
+    const task = taskInput.value.trim(); // trimming text for spaces
+
+    if (task !== '') {
+        // Creates task and adding to tasks(List of Tasks)
+        const taskList = document.getElementById('tasks');
+        const taskItem = document.createElement('li');
+        taskItem.textContent = task;
+
+        // Delete button after created task in tasklist
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'deleteButton'; // delete button style assignment
+
+        // Event-handler for delete
+        deleteButton.addEventListener('click', function() {
+            taskList.removeChild(taskItem); // deletes task from list
         });
-    
-        // Event-Handler für den "Reset"-Button
-        document.getElementById('resetButton').addEventListener('click', function() {
-          clearInterval(timerInterval); // Timer stoppen
-          secondsLeft = 25 * 60; // Timer auf 25 Minuten zurücksetzen
-          updateTimer(secondsLeft);
-          document.getElementById('startButton').disabled = false;
-          document.getElementById('resetButton').disabled = true;
-        });
-    
-        // Initialen Timer anzeigen
-        updateTimer(secondsLeft);
-      </script>
+
+        // adds delete button to task
+        taskItem.appendChild(deleteButton);
+
+        // Adds task to list
+        taskList.appendChild(taskItem);
+
+        taskInput.value = ''; // clear input field
+    } else {
+        alert('Please enter a task.');
+    }
+});
+
+// shows inital timer
+updateTimer(25, 0);
+</script>
 </body>
 </html>
