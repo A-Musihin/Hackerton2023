@@ -17,8 +17,3 @@ Contains:
 - DIY problem defition 5WH.s
 - Emphatize and define: problem tree and an empathy map
 - Ideate: Brainwriting
-
-
-Link zur Präsentation:
-https://docs.google.com/presentation/d/16b2q0aJZJ9l7qaCZQCqb0BszJ8SSHJqP35_KXNzi42c/edit?usp=sharing
-
