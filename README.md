@@ -1,19 +1,20 @@
 # Hackerton2023
 
 Table of Content
-- 1 Introduction
-- 1.1 Group Members
-- 1.2 TL:DR
-
-- 2 Main part
-- 2.1 DIY problem definition
-- 2.2 "Define and emphatize" - Phase
-- 2.3 "Ideate" - Phase
-- 2.4 Business Canvas Model
-- 2.5 "Go Viral Post"
-- 2.6 Peer-Group Feedbacks
-- 2.7 Individual Learning Goals and Reflections
-- 2.8 Overview of the Technical Solution
+1 Introduction <br>
+1.1 Group Members <br>
+1.2 TL:DR <br>
+<br>
+2 Main part <br>
+2.1 DIY problem definition <br>
+2.2 "Define and emphatize" - Phase <br>
+2.3 "Ideate" - Phase <br>
+2.4 Business Canvas Model <br>
+2.5 "Go Viral Post" <br>
+2.6 Peer-Group Feedbacks <br>
+2.7 Individual Learning Goals and Reflections <br>
+2.8 Overview of the Technical Solution <br>
+<br>
 
 # 1 Introduction
 This is our Portfolio for the Hackerton 2023 at ITECH. We created a planning solution for Students called "TaskPlanner". 
