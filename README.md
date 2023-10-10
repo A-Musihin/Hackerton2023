@@ -37,21 +37,27 @@ Developed with HTML/CSS/JAVASCRIPT.<br>
 In this Part we collected all important products for a successful Hackerton Project.
 
 # 2.1 DIY Problem Definition
-We created a problem definition with the DIY-Method. The solution is on our miro board:
+We created a problem definition with the DIY-Method.<br>
+The solution is on our miro board:<br>
+<br>
 https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
 
 # 2.2 "Define and emphatize" - Phase
-For this phase we created two problem definitions, a problem tree and an empathy map. The solutions are on our Miro board :
+For this phase we created two problem definitions, a problem tree and an empathy map. <br>
+The solutions are on our Miro board :<br>
+<br>
 https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
 
 As a team, we decided to address the problem of "insomnia among students". According to our findings, the problem is caused by poor self-management.
 
 # 2.3 "Ideate" - Phase
 
-For this phase, we created a brainwriting to find a solution to the problem. The product is on our Miro board:
-https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
-
-As a team we decided to develop a software that will help students to work and plan tasks. For this we use the Pomodoro method.
+For this phase, we created a brainwriting to find a solution to the problem.<br>
+The product is on our Miro board:<br>
+<br>
+https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087 <br>
+<br>
+As a team we decided to develop a software that will help students to work and plan tasks. For this we use the Pomodoro method.<br>
 
 # 2.4 Business Model Canvas
 We created a business model canvas for our project. <br>
