@@ -37,6 +37,17 @@ We created a problem definition with the DIY-Method. The solution is on our miro
 https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
 
 # 2.2 "Define and emphatize" - Phase
+For this phase we created two problem definitions, a problem tree and an empathy map. The solutions are on our Miro board :
+https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
+
+As a team, we decided to address the problem of "insomnia among students". According to our findings, the problem is caused by poor self-management.
+
+# 2.3 "Ideate" - Phase
+
+For this phase, we created a brainwriting to find a solution to the problem. The product is on our Miro board:
+https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
+
+
 
 Business Model Canvas
 https://app.diagrams.net/#G1Uxa6THhadyAP8cb6mubZMEd_FZMjEyyo
