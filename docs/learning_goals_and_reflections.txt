@@ -1,0 +1,37 @@
+Julian (IT2o):
+Personal Learning Goal
+Create a website using Flask as the framework with a login system that stores user credentials in a database and hashes passwords.
+
+Reflection
+I was able to implement a basic login system in Flask, but it was not secure because the credentials were stored in the code directly.
+I was not able to implement a login system that stores user credentials in a database and hashes passwords
+
+
+
+Alexander (IT2o):
+Personal Learning Objective:
+Since we are supposed to choose an objective suitable to our project I decided to learn how to create a connection between an embedded javascript in HTML and a Python code.
+Most important to me is how function call , return values and parameters work.
+
+Reflection: 
+I was partially successful in implementing my learning objective.
+Function calls and return values are implemented using data formats like .json or .xml.
+As a next step I want to learn how to pass parameters and how the .json or .xml files are structured.
+
+
+
+Kayhan (IT2o):
+My personal goal: Too learn more about html and get better in it!
+
+Result: I developed a website, with a countdown, a tasklist where you can save and delete tasks, implemented a bit CSS styling and a nice background, an alert if the time goes off.
+
+Reflexion: I learned pritty fast about html and I had a good overview on the html code, which code block does what etc.
+I had my little issues with with linking the CSS with the html code. It just didn´t work.
+
+
+
+Henrik (IT2o):
+My personal learning goal during this Hackathon was to get a deeper understanding of the inner workings of the Raspberry Pis and Arduinos, which I dabbled with a little but would love to do more with.
+As a side note, the input for the 3d Printer made me really interested in doing more research on that topic.
+
+Overall I'm excited to experiment more after the block, since our project we ended up on did not have the implementation, as we focused more on the development.
