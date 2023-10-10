@@ -75,4 +75,6 @@ https://github.com/A-Musihin/Hackerton2023/blob/main/docs/learning_goals_and_ref
 
 # 2.8 Overview of the Technical Solution
 
-Add technical Solution here:
+We created a HTML website, with a countdown, adding tasks methode and a taskslist. We added also a little bit of CSS like background picture, text colour, colour of the delete button and structuring the shown text, timer, tasklist etc.
+We used java script for the timer, tasklist and adding tasks methode and also added events for the buttons like, start/stop/reset the timer, adding tasks and deleting tasks. Also their is an alert, if the times up.
+
