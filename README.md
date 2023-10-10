@@ -27,9 +27,9 @@ This is our Portfolio for the Hackerton 2023 at ITECH. We created a planning sol
 - Antonia (IT2o)
 
 # 1.2 TL:DR
-TaskPlanner - Task planning solution.
-A web application for learning and planning support.
-Developed with HTML/CSS/JAVASCRIPT.
+TaskPlanner - Task planning solution.<br>
+A web application for learning and planning support.<br>
+Developed with HTML/CSS/JAVASCRIPT.<br>
 
 # 2 Main Part
 In this Part we collected all important products for a successful Hackerton Project.
