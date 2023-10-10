@@ -65,11 +65,13 @@ We created a Go Viral Post for Reddit.
 # 2.6 Peer-Group Feedbacks
 
 We have received peer group feedback for our DIY problem definition from other groups.
-These are in the "feedback" document in this repository in the "docs" directory.
+These are in the "feedback" document in this repository in the "docs" directory.<br>
+https://github.com/A-Musihin/Hackerton2023/blob/main/docs/feedbacks
 
 # 2.7 Individual Learning Goals and Reflections
 
-We added our individual learning goals and reflections to this repository as a document called "learning_goals_and_reflections.txt" in the "docs" directory.
+We added our individual learning goals and reflections to this repository as a document called "learning_goals_and_reflections.txt" in the "docs" directory.<br>
+https://github.com/A-Musihin/Hackerton2023/blob/main/docs/learning_goals_and_reflections.txt
 
 # 2.8 Overview of the Technical Solution
 
