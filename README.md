@@ -1,4 +1,4 @@
-![Business canvas drawio](https://github.com/A-Musihin/Hackerton2023/assets/122558845/5a247e21-2108-4752-950f-544ff55a9576)# Hackerton2023
+# Hackerton2023
 
 Table of Content <br>
 <br>
