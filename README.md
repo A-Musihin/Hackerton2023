@@ -1,6 +1,6 @@
 # Hackerton2023
 
-Table of Content <br>
+**Table of Content** <br>
 <br>
 [1 Introduction](https://github.com/A-Musihin/Hackerton2023/tree/main#1-introduction) <br>
 [1.1 Group Members](https://github.com/A-Musihin/Hackerton2023/tree/main#11-group-members) <br>
