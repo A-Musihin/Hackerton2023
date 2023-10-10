@@ -55,7 +55,6 @@ As a team we decided to develop a software that will help students to work and p
 
 # 2.4 Business Model Canvas
 We created a business model canvas for our project. <br>
-https://app.diagrams.net/#G1Uxa6THhadyAP8cb6mubZMEd_FZMjEyyo <br>
 <br>
 ![Business Model Canvas](https://raw.githubusercontent.com/A-Musihin/Hackerton2023/main/docs/Business_canvas_drawio.png)
 <br>
