@@ -47,10 +47,22 @@ As a team, we decided to address the problem of "insomnia among students". Accor
 For this phase, we created a brainwriting to find a solution to the problem. The product is on our Miro board:
 https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
 
+As a team we decided to develop a software that will help students to work and plan tasks. For this we use the Pomodoro method.
 
-
+# 2.4 Business Model Canvas
 Business Model Canvas
 https://app.diagrams.net/#G1Uxa6THhadyAP8cb6mubZMEd_FZMjEyyo
+
+# 2.5 "Go-Viral-Post"
+
+We created a Go Viral Post for Reddit. 
+![GoViralPost_Branded](https://github.com/A-Musihin/Hackerton2023/assets/122558845/1ef052fd-4b5b-44d5-b1e0-b3a5f22ccaa6)
+
+# 2.6 rest
+
+
+
+
 
 Contains:
 - DIY problem defition 5WH.s
