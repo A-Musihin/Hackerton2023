@@ -54,10 +54,9 @@ https://miro.com/app/board/uXjVMilBYTo=/?share_link_id=970643354087
 As a team we decided to develop a software that will help students to work and plan tasks. For this we use the Pomodoro method.
 
 # 2.4 Business Model Canvas
-Business Model Canvas <br>
+We created a business model canvas for our project. <br>
 https://app.diagrams.net/#G1Uxa6THhadyAP8cb6mubZMEd_FZMjEyyo <br>
 <br>
-![Business canvas drawio](https://github.com/A-Musihin/Hackerton2023/assets/122558845/51a3dbbd-28ee-415d-97b5-359e83b68c51)
 <br>
 # 2.5 "Go-Viral-Post"
 
