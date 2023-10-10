@@ -3,18 +3,18 @@
 Table of Content <br>
 <br>
 [1 Introduction](https://github.com/A-Musihin/Hackerton2023/tree/main#1-introduction) <br>
-1.1 Group Members <br>
-1.2 TL:DR <br>
+[1.1 Group Members](https://github.com/A-Musihin/Hackerton2023/tree/main#11-group-members) <br>
+[1.2 TL:DR](https://github.com/A-Musihin/Hackerton2023/tree/main#12-tldr) <br>
 <br>
-2 Main part <br>
-2.1 DIY problem definition <br>
-2.2 "Define and emphatize" - Phase <br>
-2.3 "Ideate" - Phase <br>
-2.4 Business Canvas Model <br>
-2.5 "Go Viral Post" <br>
-2.6 Peer-Group Feedbacks <br>
-2.7 Individual Learning Goals and Reflections <br>
-2.8 Overview of the Technical Solution <br>
+[2 Main part](https://github.com/A-Musihin/Hackerton2023/tree/main#2-main-part) <br>
+[2.1 DIY problem definition](https://github.com/A-Musihin/Hackerton2023/tree/main#21-diy-problem-definition) <br>
+[2.2 "Define and emphatize" - Phase](https://github.com/A-Musihin/Hackerton2023/tree/main#22-define-and-emphatize---phase) <br>
+[2.3 "Ideate" - Phase](https://github.com/A-Musihin/Hackerton2023/tree/main#23-ideate---phase) <br>
+[2.4 Business Canvas Model](https://github.com/A-Musihin/Hackerton2023/tree/main#24-business-model-canvas) <br>
+[2.5 "Go Viral Post"](https://github.com/A-Musihin/Hackerton2023/tree/main#25-go-viral-post) <br>
+[2.6 Peer-Group Feedbacks](https://github.com/A-Musihin/Hackerton2023/tree/main#26-peer-group-feedbacks) <br>
+[2.7 Individual Learning Goals and Reflections](https://github.com/A-Musihin/Hackerton2023/tree/main#27-individual-learning-goals-and-reflections) <br>
+[2.8 Overview of the Technical Solution](https://github.com/A-Musihin/Hackerton2023/tree/main#28-overview-of-the-technical-solution) <br>
 <br>
 
 # 1 Introduction
