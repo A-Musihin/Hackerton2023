@@ -13,7 +13,7 @@ Table of Content
 - 2.5 "Go Viral Post"
 - 2.6 Peer-Group Feedbacks
 - 2.7 Individual Learning Goals and Reflections
-- 2.8 Overview of the technical Solution
+- 2.8 Overview of the Technical Solution
 
 # 1 Introduction
 This is our Portfolio for the Hackerton 2023 at ITECH. We created a planning solution for Students called "TaskPlanner". 
@@ -58,13 +58,15 @@ https://app.diagrams.net/#G1Uxa6THhadyAP8cb6mubZMEd_FZMjEyyo
 We created a Go Viral Post for Reddit. 
 ![GoViralPost_Branded](https://github.com/A-Musihin/Hackerton2023/assets/122558845/1ef052fd-4b5b-44d5-b1e0-b3a5f22ccaa6)
 
-# 2.6 rest
+# 2.6 Peer-Group Feedbacks
 
+We have received peer group feedback for our DIY problem definition from other groups.
+These are in the "feedback" document in this repository in the "docs" directory.
 
+# 2.7 Individual Learning Goals and Reflections
 
+We added our individual learning goals and reflections to this repository as a document called "learning_goals_and_reflections.txt" in the "docs" directory.
 
+# 2.8 Overview of the Technical Solution
 
-Contains:
-- DIY problem defition 5WH.s
-- Emphatize and define: problem tree and an empathy map
-- Ideate: Brainwriting
+Add technical Solution here:
